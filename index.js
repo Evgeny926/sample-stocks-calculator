@@ -74,7 +74,7 @@ app.get('/stock', (req, res) => {
         //check if the currency requested is not the same as company's currency
         if(companyCurrency && companyCurrency != currency){
         //get exchnage reate if currencies are not the same
-            curP = axios(`https://api.polygon.io/v2/aggs/ticker/C:${companyCurrency}${currency}/range/1/day/${date}/${date}?adjusted=true&sort=asc&limit=120&apiKey=${currencyApiKey}`).then(
+            curP = axios(`https://api.polygon.io/v2/aggs/ticker/C:${companyCurrency}${currency}/prev?adjusted=true&apiKey=${currencyApiKey}`).then(
                 s => {
                     if(!s.data.results) {
                         return Promise.reject('Error retrieving currency rate.')
