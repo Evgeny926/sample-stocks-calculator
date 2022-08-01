@@ -2,6 +2,8 @@
 Sample stocks calculator to convert stock price (OHLC) to selected currency using latest closing date of currency trade. Additionally, it shows volume.
 
 ## Before using:
+Install dependencies.
+
 Set up API keys in config.json
 
 ## Usage:
